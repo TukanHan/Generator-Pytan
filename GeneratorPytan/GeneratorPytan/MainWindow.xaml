@@ -1,0 +1,27 @@
+﻿<Window x:Class="GeneratorPytan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeneratorPytan"
+        mc:Ignorable="d"
+        Title="Generator Testów" Height="500" Width="760">
+
+
+    <DockPanel Background="#FF61748C" >
+        <local:PasekMenu x:Name="pasekMenu" DockPanel.Dock="Top" />
+        <local:PasekStanu x:Name="pasekStanu" DockPanel.Dock="Bottom"/>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MinWidth="550"/>
+
+                <ColumnDefinition Width="*" MinWidth="200"/>
+            </Grid.ColumnDefinitions>
+            <local:ObszarRoboczy x:Name="obszarRoboczy" Grid.Column="0" Margin="3,3"/>
+
+            <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Left" Background="#00000000" />
+            <local:ObszarPomocniczy x:Name="obszarPomocniczy" Grid.Column="1" Margin="3,3"/>
+        </Grid>
+    </DockPanel>
+
+</Window>

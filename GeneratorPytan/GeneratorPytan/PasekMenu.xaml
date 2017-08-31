@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="GeneratorPytan.PasekMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GeneratorPytan"
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="300">
+    <Grid>
+        <Menu>
+            <MenuItem Header="_Plik">
+                <MenuItem Header="_Nowa Baza" />
+                <MenuItem Header="_Wczytaj Baze" />
+                <MenuItem Header="_Zapisz Baze" />
+                <Separator/>
+                <MenuItem Header="_Wyjdź" />
+            </MenuItem>
+            <MenuItem Header="_Baza">
+                <MenuItem Header="_Ustawienia" />
+                <MenuItem Header="_Dodaj Pytanie"/>
+            </MenuItem>
+            <MenuItem Header="_Pytanie">
+                <MenuItem Header="_Poprzednie" />
+                <MenuItem Header="_Następne"/>
+                <MenuItem Header="_Usuń"/>
+            </MenuItem>
+            <MenuItem Header="_Pomoc">
+                <MenuItem Header="_Pomoc" />
+                <MenuItem Header="_O Programie"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</UserControl>
