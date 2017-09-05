@@ -7,10 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="20" d:DesignWidth="750">
     <Grid>
-        <StatusBar >
-            <StatusBarItem>
-                <TextBlock Name="lblCursorPosition" Text="Gotów do Pracy :)"/>
-            </StatusBarItem>
+        <StatusBar x:Name="statusBar">
+            <DockPanel Width="{Binding ActualWidth, ElementName=statusBar, Mode=OneWay}" >
+                <StackPanel Name="stackInformacji" Orientation="Horizontal">
+                </StackPanel>
+
+                <StackPanel Name="stackStanu" HorizontalAlignment="Right" Orientation="Horizontal" Margin="10,0">
+                </StackPanel>
+            </DockPanel>
         </StatusBar>
     </Grid>
 </UserControl>

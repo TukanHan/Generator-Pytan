@@ -4,9 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeneratorPytan"
+        xmlns:my="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Generator Testów" Height="500" Width="760">
 
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Zasob.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
     <DockPanel Background="#FF61748C" >
         <local:PasekMenu x:Name="pasekMenu" DockPanel.Dock="Top" />
@@ -14,14 +22,12 @@
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" MinWidth="550"/>
-
                 <ColumnDefinition Width="*" MinWidth="200"/>
             </Grid.ColumnDefinitions>
-            <local:ObszarRoboczy x:Name="obszarRoboczy" Grid.Column="0" Margin="3,3"/>
 
+            <local:ObszarRoboczy x:Name="obszarRoboczy" Grid.Column="0" Margin="3,3"/>
             <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Left" Background="#00000000" />
             <local:ObszarPomocniczy x:Name="obszarPomocniczy" Grid.Column="1" Margin="3,3"/>
         </Grid>
     </DockPanel>
-
 </Window>

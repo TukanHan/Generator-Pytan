@@ -10,49 +10,8 @@
 
         <Rectangle Height="22" Margin="0,0,0,0" VerticalAlignment="Top" Fill="#FF6EB7F3" Stroke="White"/>
         <TextBlock HorizontalAlignment="Left" Height="17" TextWrapping="Wrap" Text="Podgląd bazy" VerticalAlignment="Top" Width="173" Foreground="#FF454545" Margin="6,2,0,0"/>
-        <TreeView Margin="0,24,-0.4,0" Background="{x:Null}" BorderBrush="{x:Null}">
-            <TreeViewItem Header="Systemy operacyjne" IsExpanded="True">
-                <TreeViewItem Header="Level 2.1" />
-                <TreeViewItem Header="Czy można cośtam cośtam dupa maryna" IsExpanded="True">
-                    <TreeViewItem Header="Level 3.1" Collapsed="TreeViewItem_Collapsed" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.1" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.2" />
-                    <TreeViewItem Header="Level 3.2" />
-                </TreeViewItem>
-                <TreeViewItem Header="Level 2.3" />
-            </TreeViewItem>
+        <TreeView x:Name="drzewo" Margin="0,24,-0.4,0" Background="{x:Null}" BorderBrush="{x:Null}">
+
         </TreeView>
     </Grid>
 </UserControl>

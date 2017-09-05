@@ -9,24 +9,27 @@
     <Grid>
         <Menu>
             <MenuItem Header="_Plik">
-                <MenuItem Header="_Nowa Baza" />
-                <MenuItem Header="_Wczytaj Baze" />
-                <MenuItem Header="_Zapisz Baze" />
+                <MenuItem Name="menuNowaBaza" Header="_Nowa Baza" Click="menuNowaBaza_Click" />
+                <MenuItem Name="menuWczytajBaze" Header="_Wczytaj Baze" Click="menuWczytajBaze_Click" />
                 <Separator/>
-                <MenuItem Header="_Wyjdź" />
+                <MenuItem Name="menuWyjdz" Header="_Wyjdź" Click="menuWyjdz_Click"/>
             </MenuItem>
-            <MenuItem Header="_Baza">
-                <MenuItem Header="_Ustawienia" />
-                <MenuItem Header="_Dodaj Pytanie"/>
+            <MenuItem Name="menuBazaDanych" Header="_Baza" IsEnabled="False">
+                <MenuItem Name="menuUstawieniaBazy" Header="_Ustawienia" Click="menuUstawieniaBazy_Click" />
+                <MenuItem Name="menuPytania" Header="_Pytania" Click="menuPytania_Click"/>
+                <MenuItem Name="menuZapiszBaze" Header="_Zapisz Baze (proj)" Click="menuZapiszBaze_Click" />
+                <MenuItem Name="menuEksportujBaze" Header="_Eksportuj Bazę (baza)" Click="menuEksportujBaze_Click"  />
+                <MenuItem Name="menuEksportujPytania" Header="_Eksportuj Pytania (txt)" Click="menuEksportujPytania_Click"   />
+                <MenuItem Name="menuImportujPytania" Header="_Importuj Pytania (txt)" Click="menuImportujPytania_Click"   />
             </MenuItem>
-            <MenuItem Header="_Pytanie">
-                <MenuItem Header="_Poprzednie" />
-                <MenuItem Header="_Następne"/>
-                <MenuItem Header="_Usuń"/>
+            <MenuItem Name="menuPytanie" Header="_Pytanie" IsEnabled="False">
+                <MenuItem Name="menuPoprzedniePytanie" Header="_Poprzednie" Click="menuPoprzedniePytanie_Click" />
+                <MenuItem Name="menuNastepnePytanie" Header="_Następne" Click="menuNastepnePytanie_Click"/>
+                <MenuItem Name="menuUsun" Header="_Usuń" Click="menuUsun_Click"/>
             </MenuItem>
             <MenuItem Header="_Pomoc">
-                <MenuItem Header="_Pomoc" />
-                <MenuItem Header="_O Programie"/>
+                <MenuItem Name="menuPomoc" Header="_Pomoc" Click="menuPomoc_Click" />
+                <MenuItem Name="menuOProgramie" Header="_O Programie" Click="menuOProgramie_Click"/>
             </MenuItem>
         </Menu>
     </Grid>

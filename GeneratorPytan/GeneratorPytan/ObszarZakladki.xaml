@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="GeneratorPytan.ObszarZakladki"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GeneratorPytan"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Zasob.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid x:Name="warstwaPytania" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="18*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <RadioButton x:Name="typJednokrotnego" GroupName ="TypWyboru"  Content="Jednokrotnego" HorizontalAlignment="Center" Height="23" Margin="113,36,276.6,0" VerticalAlignment="Top" Width="104" FontFamily="Microsoft JhengHei UI Light" Checked="typJednokrotnego_Checked"/>
+            <RadioButton x:Name="typWielkokrotnego" GroupName ="TypWyboru"  Content="Wielokrotnego" HorizontalAlignment="Center" Height="23" Margin="156,36,0,0" VerticalAlignment="Top" Width="104" FontFamily="Microsoft JhengHei UI Light" Checked="typWielkokrotnego_Checked"/>
+            <TextBlock HorizontalAlignment="Center" Height="36" Margin="0,0,0,0" TextWrapping="Wrap" Text="Tryb wyboru:" VerticalAlignment="Top" Width="133" TextAlignment="Center" FontSize="18" FontFamily="Microsoft JhengHei UI Light"/>
+            <TextBox Grid.Row="1" x:Name="trescPytania" Height="Auto" Margin="69,50.2,53.6,0" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar urna iaculis enim iaculis ultricies. Donec facilisis hendrerit luctus. Vestibulum varius viverra lorem," VerticalAlignment="Top" FontSize="14" FontFamily="Microsoft YaHei UI Light"/>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" Height="36"  TextWrapping="Wrap" Text="Pytanie:" VerticalAlignment="Top" Width="133" TextAlignment="Center" FontSize="18" Margin="181,9.2,179.6,0" FontFamily="Microsoft JhengHei UI Light"/>
+            <TextBlock Grid.Row="2" HorizontalAlignment="Center" Height="26"  TextWrapping="Wrap" Text="Odpowiedzi:" VerticalAlignment="Top" Width="133" TextAlignment="Center" FontSize="18" Margin="180,10.4,180.6,0" FontFamily="Microsoft JhengHei UI Light"/>
+            <ScrollViewer Grid.Row="2" VerticalAlignment="Stretch" Margin="20,36.4,33.6,0" VerticalScrollBarVisibility="Auto">
+                <ListBox x:Name="listaUchwyt" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="IsSelected" Value="{Binding Content.IsSelected, Mode=TwoWay, RelativeSource={RelativeSource Self}}"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+
+                    <Grid x:Name="SzablonOdpowiedzi" Height="Auto" Margin="2,2" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}},Path=ActualWidth}">
+                        <TextBox x:Name="trescOdpowiedzi" HorizontalAlignment="Left" Height="Auto" Margin="69,0,0,-1.2" TextWrapping="Wrap" Text="TextBo asd asd asdkashd kasdhkjash sd asdkashd kasdhkjashdkhaskdh hsdjkjashd asjdh kajsdh jasdh jasdh ja sdkahsdj ad asd asd as da s dkhaskdh hsdjkjashd asjdh kajsdh jasdh jasdh ja sdkahsdj ad asd asd as da sx" VerticalAlignment="Top" MinWidth="350" FontFamily="Microsoft JhengHei UI Light" />
+                        <CheckBox x:Name="checkBoxOdpowiedzi"  HorizontalAlignment="Left" Height="16" VerticalAlignment="Center" Width="24" Margin="39,0,0,0"/>
+                        <Button x:Name="przyciskUsunOdpowiedz" Content="X" HorizontalAlignment="Left" Height="20" Margin="15,0,0,0" VerticalAlignment="Center" Width="24" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" FontFamily="Microsoft YaHei Light" Foreground="#FF9F0000" RenderTransformOrigin="0.5,0.5" Style="{StaticResource MyButtonStyle}">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="-2"/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                        </Button>
+                    </Grid>
+                    <Grid Height="Auto" Margin="2,2" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBox}},Path=ActualWidth}">
+                        <Button x:Name="przyciskDodajOdpowiedz" Width="110" Height="25" Content="Dodaj odpowiedź" Margin="183,0,147.8,-0.2" Click="przyciskDodajOdpowiedz_Click" >
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="#FFE4E4E4" Offset="0"/>
+                                    <GradientStop Color="#FFC5C5C5" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
+
+                </ListBox>
+            </ScrollViewer>
+            <Button Grid.Row="3" x:Name="przyciskPoprzedni" Content="Poprzednie pytanie" Height="25" Margin="78,0,305.4,20.2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="111" Click="przyciskPoprzedni_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE4E4E4" Offset="0"/>
+                        <GradientStop Color="#FFC5C5C5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="3" x:Name="przyciskNastepny" Content="Następne pytanie" Height="25" Margin="323,0,53.6,20.2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="100" Click="przyciskNastepny_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE4E4E4" Offset="0"/>
+                        <GradientStop Color="#FFC5C5C5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Row="3" x:Name="przyciskUsun" Content="Usuń pytanie" Height="25" Margin="208,0,181.4,20.2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="90" Click="przyciskUsun_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE4E4E4" Offset="0"/>
+                        <GradientStop Color="#FFC5C5C5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid x:Name="warstwaUstawien">
+            <TextBlock HorizontalAlignment="Left" Height="30" Margin="76,36,0,0" TextWrapping="Wrap" Text="Nazwa bazy:" VerticalAlignment="Top" Width="113" FontFamily="Microsoft JhengHei UI Light" FontSize="18"/>
+            <TextBox x:Name="blokNazwaBazy" HorizontalAlignment="Left" Height="30" Margin="214,36,0,0" TextWrapping="Wrap" Text="NowaBaza" VerticalAlignment="Top" Width="228" FontSize="18" FontFamily="Microsoft JhengHei UI Light"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" Margin="76,86,0,0" TextWrapping="Wrap" Text="Opis:" VerticalAlignment="Top" Width="113" FontFamily="Microsoft JhengHei UI Light" FontSize="18"/>
+            <TextBox x:Name="blokOpisBazy" HorizontalAlignment="Left" Height="77" Margin="214,86,0,0" TextWrapping="Wrap" Text=" asda sd asd asd asd ad asd asd asd as das asd as dasd ad asd asd asd assd asd asd  asd as asdasdadasd" VerticalAlignment="Top" Width="228" FontSize="14" FontFamily="Microsoft JhengHei UI Light"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" Margin="76,182,0,0" TextWrapping="Wrap" Text="Autor:" VerticalAlignment="Top" Width="113" FontFamily="Microsoft JhengHei UI Light" FontSize="18"/>
+            <TextBox x:Name="blokAutorBazy" HorizontalAlignment="Left" Height="30" Margin="214,182,0,0" TextWrapping="Wrap" Text="Autor Widmo" VerticalAlignment="Top" Width="228" FontSize="18" FontFamily="Microsoft JhengHei UI Light"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" Margin="76,235,0,0" TextWrapping="Wrap" Text="Czas (minuty):" VerticalAlignment="Top" Width="135" FontFamily="Microsoft JhengHei UI Light" FontSize="18"/>
+            <TextBox x:Name="blokCzasEgzaminu" HorizontalAlignment="Left" Height="30" Margin="214,234,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="228" FontSize="18" FontFamily="Microsoft JhengHei UI Light"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" Margin="76,286,0,0" TextWrapping="Wrap" Text="Liczba pytań" VerticalAlignment="Top" Width="135" FontFamily="Microsoft JhengHei UI Light" FontSize="18"/>
+            <TextBox x:Name="blokLiczbaPytanEgzaminacyjnych" HorizontalAlignment="Left" Height="30" Margin="214,286,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="228" FontSize="18" FontFamily="Microsoft JhengHei UI Light"/>
+        </Grid>
+    </Grid>
+</UserControl>
