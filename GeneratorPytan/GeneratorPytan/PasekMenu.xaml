@@ -10,14 +10,14 @@
         <Menu>
             <MenuItem Header="_Plik">
                 <MenuItem Name="menuNowaBaza" Header="_Nowa Baza" Click="menuNowaBaza_Click" />
-                <MenuItem Name="menuWczytajBaze" Header="_Wczytaj Baze" Click="menuWczytajBaze_Click" />
+                <MenuItem Name="menuWczytajBaze" Header="_Wczytaj Bazę" Click="menuWczytajBaze_Click" />
                 <Separator/>
                 <MenuItem Name="menuWyjdz" Header="_Wyjdź" Click="menuWyjdz_Click"/>
             </MenuItem>
             <MenuItem Name="menuBazaDanych" Header="_Baza" IsEnabled="False">
                 <MenuItem Name="menuUstawieniaBazy" Header="_Ustawienia" Click="menuUstawieniaBazy_Click" />
                 <MenuItem Name="menuPytania" Header="_Pytania" Click="menuPytania_Click"/>
-                <MenuItem Name="menuZapiszBaze" Header="_Zapisz Baze (proj)" Click="menuZapiszBaze_Click" />
+                <MenuItem Name="menuZapiszBaze" Header="_Zapisz Bazę (proj)" Click="menuZapiszBaze_Click" />
                 <MenuItem Name="menuEksportujBaze" Header="_Eksportuj Bazę (baza)" Click="menuEksportujBaze_Click"  />
                 <MenuItem Name="menuEksportujPytania" Header="_Eksportuj Pytania (txt)" Click="menuEksportujPytania_Click"   />
                 <MenuItem Name="menuImportujPytania" Header="_Importuj Pytania (txt)" Click="menuImportujPytania_Click"   />

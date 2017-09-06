@@ -18,7 +18,7 @@
                     <TreeViewItem>
                         <TreeViewItem.Header>
                             <StackPanel>
-                                <TextBlock Text="Program umożliwia tworzenie baz danych wykożystywanych przez program do testowania." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
+                                <TextBlock Text="Program umożliwia tworzenie baz danych wykorzystywanych przez program do testowania." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
                             </StackPanel>
                         </TreeViewItem.Header>
                     </TreeViewItem>
@@ -30,8 +30,8 @@
                     <TreeViewItem>
                         <TreeViewItem.Header>
                             <StackPanel>
-                                <TextBlock Text="Przez (Menu->Plik->Nowa Baza) możemy utworzyć nową bazę którą możemy eksportoać do pliku używanego przez program testujący (.baza) lub zapisać do pliku (.proj) by móc ją puźniej odczytać" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Każda baza podzielona jest na dwie części.: Ustawienia - dotyczącze informacji o całej bazie. Pytań - które pojawią się w programie testowym" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Przez (Menu->Plik->Nowa Baza) możemy utworzyć nową bazę którą możemy eksportować do pliku używanego przez program testujący (.baza) lub zapisać do pliku (.proj) by móc ją później odczytać" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Każda baza podzielona jest na dwie części.: Ustawienia - dotyczące informacji o całej bazie. Pytań - które pojawią się w programie testowym" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
 
                             </StackPanel>
                         </TreeViewItem.Header>
@@ -44,12 +44,12 @@
                     <TreeViewItem>
                         <TreeViewItem.Header>
                             <StackPanel>
-                                <TextBlock Text="Każda baza zawiera swoje prywatne ustawienia" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Nazwa Bazy - wymagany element reprezentujący bazę w programie testującymy" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Opis Bazy - element który któtko streśći harakterystykę bazy" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Autor Bazy - Użytkownika tego programu" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Lczbę pytań - ilość pytań wylosowanych z całej puli podczas egzaminu" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Czas egzaminu - czas dany użytkownikowi testu na jego rozwiązanie" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Każda baza zawiera swoje prywatne ustawienia." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Nazwa Bazy - wymagany element reprezentujący bazę w programie testującym." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Opis Bazy - element który krótko streści charakterystykę bazy." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Autor Bazy - Użytkownika tego programu." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Liczbę pytań - ilość pytań wylosowanych z całej puli podczas egzaminu." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Czas egzaminu - czas dany użytkownikowi testu na jego rozwiązanie." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
                             </StackPanel>
                         </TreeViewItem.Header>
                     </TreeViewItem>
@@ -61,10 +61,10 @@
                     <TreeViewItem>
                         <TreeViewItem.Header>
                             <StackPanel>
-                                <TextBlock Text="Pytania mogą być jednokrotnego lub wielokrotnego wyboru. Opcję tą wybieramy przez wybór radio buttona" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Treść pytania jest ustalona w okienku pytanie" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Pytanie jednokrotnego wyboru powinno mieć co najmniej 2 odpowiedzi i dokładnie 1 poprawną odpowiedź" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Pytanie wielokrotnego wyboru powinny mieć co najmniej 1 odpowiedź i dowolną liczbę poprawnych odpowiedzi" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Pytania mogą być jednokrotnego lub wielokrotnego wyboru. Opcję tą wybieramy przez wybór radio buttona." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Treść pytania jest ustalona w okienku pytanie." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Pytanie jednokrotnego wyboru powinno mieć co najmniej 2 odpowiedzi i dokładnie 1 poprawną odpowiedź." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Pytanie wielokrotnego wyboru powinny mieć co najmniej 1 odpowiedź i dowolną liczbę poprawnych odpowiedzi." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
 
                             </StackPanel>
                         </TreeViewItem.Header>
@@ -77,9 +77,9 @@
                     <TreeViewItem>
                         <TreeViewItem.Header>
                             <StackPanel>
-                                <TextBlock Text="Pytania można przewijać oraz usówać w okienku pytania" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Pytania można przewijać oraz usówać na pasku menu" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
-                                <TextBlock Text="Za pomocą paska nawigacji po prawej stronie możemy przenieść się do dowolnie wybranego pytania w bazie lub ustawień bazy" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Pytania można przewijać oraz usuwać w okienku pytania." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Pytania można przewijać oraz usuwać na pasku menu." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
+                                <TextBlock Text="Za pomocą paska nawigacji po prawej stronie możemy przenieść się do dowolnie wybranego pytania w bazie lub ustawień bazy." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,3"/>
 
                             </StackPanel>
                         </TreeViewItem.Header>
@@ -92,13 +92,12 @@
                     <TreeViewItem>
                         <TreeViewItem.Header>
                             <StackPanel>
-                                    <TextBlock Text="Program udostępnia możliwość zapisu projektu do pliku (.proj): Menu->Baza->Zapisz Baze" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
-                                    <TextBlock Text="Gotowy projekt w formacie (.proj) można wczytać: Menu->Plik->Wczytaj Baze" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
-                                    <TextBlock Text="Kompletną bazę można eksportować do pliku (.baza). Program uprzednio sprawdzi poprawność bazy:.  Menu->Baza->Eksportuj Bazę" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
-                                    <TextBlock Text="Do programu można importować pytania w formacie (.txt):  Menu->Baza->Importuj Pytania" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
-                                    <TextBlock Text="Pytania można eksportować do pliku (.txt):  Menu->Baza->Eksportuj Pytania" FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
-                                </StackPanel>
-
+                                <TextBlock Text="Program udostępnia możliwość zapisu projektu do pliku (.proj): Menu->Baza->Zapisz Bazę." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
+                                <TextBlock Text="Gotowy projekt w formacie (.proj) można wczytać: Menu->Plik->Wczytaj Bazę." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
+                                <TextBlock Text="Kompletną bazę można eksportować do pliku (.baza). Program uprzednio sprawdzi poprawność bazy:.  Menu->Baza->Eksportuj Bazę." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
+                                <TextBlock Text="Do programu można importować pytania w formacie (.txt):  Menu->Baza->Importuj Pytania." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
+                                <TextBlock Text="Pytania można eksportować do pliku (.txt):  Menu->Baza->Eksportuj Pytania." FontFamily="Microsoft JhengHei UI Light" Width="330" TextWrapping="Wrap" Margin="0,5"/>
+                            </StackPanel>
                         </TreeViewItem.Header>
                     </TreeViewItem>
                 </TreeViewItem>

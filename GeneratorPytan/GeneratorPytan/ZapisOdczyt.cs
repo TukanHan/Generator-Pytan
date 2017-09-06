@@ -101,7 +101,6 @@ namespace GeneratorPytan
                     {
                         sw.WriteLine(pytanie.pytanie);
                         sw.WriteLine(pytanie.trybPytania);
-                        sw.WriteLine(pytanie.pytanie);
                         sw.WriteLine(pytanie.OdpowiedziCount);
 
                         foreach (Odpowiedz odpowiedz in pytanie.odpowiedzi)
@@ -156,15 +155,15 @@ namespace GeneratorPytan
 
         public static void ImportujPytanie(BazaDanych bazaDanych, string[] lokalizacje, Action<double, string> MetodaZwrotna)
         {
-            try
-            {
-                MetodaZwrotna(0, "Importowanie pytań ");
+            MetodaZwrotna(0, "Importowanie pytań ");
 
-                for (int i = 0; i < lokalizacje.Length; ++i)
+            for (int i = 0; i < lokalizacje.Length; ++i)
+            {
+                try
                 {
                     using (StreamReader sr = new StreamReader(lokalizacje[i], Kodowanie))
                     {
-                        Pytanie pytanie = new Pytanie(bazaDanych,TrybPytania.Wielokrotne);
+                        Pytanie pytanie = new Pytanie(bazaDanych, TrybPytania.Wielokrotne);
                         pytanie.pytanie = sr.ReadLine();
 
                         string[] poprawneOdpowiedzi = sr.ReadLine().Split();
@@ -174,25 +173,23 @@ namespace GeneratorPytan
                             pytanie.DodajOdpowiedz(new Odpowiedz(pytanie) { tresc = dane });
                         }
 
-                        foreach(string poprawnaOdpowiedz in poprawneOdpowiedzi)
+                        foreach (string poprawnaOdpowiedz in poprawneOdpowiedzi)
                         {
                             pytanie.odpowiedzi[int.Parse(poprawnaOdpowiedz) - 1].czyPoprawna = true;
                         }
 
                         bazaDanych.DodajPytanie(pytanie);
                     }
-                    
+
                     MetodaZwrotna((1 / lokalizacje.Length) * i, String.Empty);
                 }
+                catch
+                {
+                    MessageBox.Show($"Problem z odczytem pliku {lokalizacje[i]}");
+                }
             }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            finally
-            {
-                MetodaZwrotna(-1, String.Empty);                
-            }
+
+            MetodaZwrotna(-1, String.Empty);
         }
     }
 }

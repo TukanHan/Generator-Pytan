@@ -126,8 +126,7 @@ namespace GeneratorPytan
                 {
                     for (int i = 0; i < listaUchwyt.Items.Count - 1; ++i)
                     {
-                        CheckBox cbx = (listaUchwyt.Items[i] as Grid).FindName("checkBoxOdpowiedzi") as CheckBox;
-                        if (cbx == s)
+                        if ((listaUchwyt.Items[i] as Grid).FindName("checkBoxOdpowiedzi") == s)
                         {
                             AktualnePytanie.odpowiedzi[i].czyPoprawna = false;
                             break;
